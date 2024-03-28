@@ -5,21 +5,11 @@ import {projectsData} from "@/lib/data";
 import Project from "@/components/project";
 import {useInView} from "react-intersection-observer";
 import {useCurrentSectionContext} from "@/context/currentSectionContext";
+import {useObservedSection} from "@/lib/customHooks";
 
 export default function Projects() {
-    const {ref, inView} = useInView({
-        threshold: 0.65
-    });
-    const { currentSection, setCurrentSection, lastClicked } = useCurrentSectionContext();
+    const {ref} = useObservedSection("Projects", 0.5);
 
-    useEffect(() => {
-            console.log(currentSection)
-
-            if (inView && Date.now() - lastClicked > 1000) {
-                setCurrentSection("Projects")
-            }
-        }, [inView, setCurrentSection, lastClicked]
-    )
     return (
         <section ref={ref} id="projects" className="scroll-mt-28">
             <SectionHeading>Projects</SectionHeading>

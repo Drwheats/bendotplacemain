@@ -5,18 +5,11 @@ import SectionHeading from "@/components/sectionHeading";
 import {motion} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 import {CurrentSectionContext, useCurrentSectionContext} from "@/context/currentSectionContext";
+import {useObservedSection} from "@/lib/customHooks";
 
 export default function AboutMe() {
-    const {ref, inView} = useInView({
-        threshold: 1
-    });
-    const { setCurrentSection, lastClicked } = useCurrentSectionContext();
+    const {ref} = useObservedSection("About", 0.75);
 
-    useEffect(() => {
-            if (inView && Date.now() - lastClicked > 1000) {
-                setCurrentSection("About");
-            }
-    }, [inView, setCurrentSection, lastClicked]);
 
     return <motion.section className="mb-28 max-w[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
     ref={ref}

@@ -1,8 +1,9 @@
 "use client"
 import React, {createContext, useContext, useState} from 'react';
 import {navBarCategories} from "@/lib/data";
+import {SectionName} from "@/lib/types";
 
-type SectionName = typeof navBarCategories[number]["name"];
+
 type CurrentSectionContextProviderProps = {children: React.ReactNode}
 type CurrentSectionContextType = {
     currentSection: SectionName;

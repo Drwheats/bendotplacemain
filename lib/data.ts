@@ -67,6 +67,7 @@ export const projectsData = [
             "An imageboard written in React. Uses a RESTful api to validate and serve content from my node/express server. My first real project.",
         tags: ["React", "Node.js"],
         imageUrl: boardImage,
+        href: "https://board.ben.place/"
     },
     {
         title: "Draft League",
@@ -74,6 +75,7 @@ export const projectsData = [
             "A central hub to manage the Pokemon draft league that I play with my friends. It's written in react, and it communicates with my node/express API server, using a Google Sheet document as the database.",
         tags: ["JavaScript", "React", "Node.js", ],
         imageUrl: monsImage,
+        href: "https://mons.ben.place/"
     },
     {
         title: "Local Theatre Calendar",
@@ -81,6 +83,7 @@ export const projectsData = [
             "Shows what's playing in downtown Toronto cinemas. Uses my node/express API server, and I collect the data with a scraper that automatically runs every week. Hastily turned into a React app. ",
         tags: ["JavaScript", "Node.js", ],
         imageUrl: calendarImage,
+        href: "https://calendar.ben.place/"
     },
 ] as const;
 

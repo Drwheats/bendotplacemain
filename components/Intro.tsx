@@ -6,23 +6,10 @@ import { FaGithubSquare } from "react-icons/fa";
 import {BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import Link from "next/link";
-import {useInView} from "react-intersection-observer";
-import {useCurrentSectionContext} from "@/context/currentSectionContext";
+import {useObservedSection} from "@/lib/customHooks";
 
 export default function Intro() {
-    const {ref, inView} = useInView({
-        threshold: 0.5
-    });
-    const { currentSection, setCurrentSection , lastClicked} = useCurrentSectionContext();
-
-    useEffect(() => {
-            console.log(currentSection)
-
-            if (inView && Date.now() - lastClicked > 1000) {
-                setCurrentSection("Home")
-            }
-        }, [inView, setCurrentSection, lastClicked]
-    )
+    const {ref} = useObservedSection("Home", 0.75);
 
     return (
         <section id="home" className="scroll-mt-28" ref={ref}>
