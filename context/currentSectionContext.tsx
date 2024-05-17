@@ -1,6 +1,5 @@
 "use client"
 import React, {createContext, useContext, useState} from 'react';
-import {navBarCategories} from "@/lib/data";
 import {SectionName} from "@/lib/types";
 
 
@@ -29,7 +28,7 @@ export function useCurrentSectionContext() {
 
     if (context === null) {
         throw new Error(
-            "why are you accessing thishere lol"
+            "why are you accessing this here lol"
         );
     }
     return context;

@@ -1,5 +1,5 @@
 "use client";
-import React, {useEffect} from "react";
+import React from "react";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import { FaGithubSquare } from "react-icons/fa";
@@ -7,6 +7,7 @@ import {BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import Link from "next/link";
 import {useObservedSection} from "@/lib/customHooks";
+import {useCurrentSectionContext} from "@/context/currentSectionContext";
 
 export default function Intro() {
     const {ref} = useObservedSection("Home", 0.75);
@@ -63,8 +64,8 @@ export default function Intro() {
                     href="#contact"
                     className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
                     onClick={() => {
-                        setActiveSection("Contact");
-                        setTimeOfLastClick(Date.now());
+                        // setActiveSection("Contact");
+                        // setTimeOfLastClick(Date.now());
                     }}
                 >
                     Contact me {" "}

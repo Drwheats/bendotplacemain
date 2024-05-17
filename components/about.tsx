@@ -1,10 +1,7 @@
 "use client"
-import React, {useEffect} from "react";
-import sectionHeading from "@/components/sectionHeading";
+import React from "react";
 import SectionHeading from "@/components/sectionHeading";
 import {motion} from "framer-motion";
-import {useInView} from "react-intersection-observer";
-import {CurrentSectionContext, useCurrentSectionContext} from "@/context/currentSectionContext";
 import {useObservedSection} from "@/lib/customHooks";
 
 export default function AboutMe() {
@@ -19,7 +16,7 @@ export default function AboutMe() {
     id="about">
         <SectionHeading>About Me</SectionHeading>
         <p className="mb-3">
-            Ben dot place is a place for me to share my projects. I have 3 projects so far and they are all here. This is where my 3 projects are kept.
+            Very little has been written about Ben;
         {/*    After graduating with a degree in{" "}*/}
         {/*    <span className="font-medium">Accounting</span>, I decided to pursue my*/}
         {/*    passion for programming. I enrolled in a coding bootcamp and learned{" "}*/}
