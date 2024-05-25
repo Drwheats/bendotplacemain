@@ -6,7 +6,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import {BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import Link from "next/link";
-import {useObservedSection} from "@/lib/customHooks";
+import {useObservedSection, setObservedSection} from "@/lib/customHooks";
 import {useCurrentSectionContext} from "@/context/currentSectionContext";
 
 export default function Intro() {
@@ -43,7 +43,7 @@ export default function Intro() {
             </div>
 
             <motion.h1
-                className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+                className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl w-[70vw]"
                 initial={{opacity: 0, y: 100, z: 1}}
                 animate={{opacity: 1, y: 0}}
             >
@@ -53,7 +53,7 @@ export default function Intro() {
             </motion.h1>
 
             <motion.div
-                className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+                className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium "
                 initial={{opacity: 0, y: 100, z: 1}}
                 animate={{opacity: 1, y: 0, z: 1}}
                 transition={{
@@ -64,8 +64,8 @@ export default function Intro() {
                     href="#contact"
                     className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
                     onClick={() => {
-                        // setActiveSection("Contact");
-                        // setTimeOfLastClick(Date.now());
+                        useObservedSection("Contact");
+                        setTimeOfLastClick(Date.now());
                     }}
                 >
                     Contact me {" "}
