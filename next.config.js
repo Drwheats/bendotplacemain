@@ -7,6 +7,9 @@ const nextConfig = {
                 hostname: 'static.wikia.nocookie.net'
             }
         ]
+    },
+    experimental: {
+        serverActions: true,
     }
 };
 

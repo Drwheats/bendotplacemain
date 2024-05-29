@@ -28,7 +28,7 @@ export function useCurrentSectionContext() {
 
     if (context === null) {
         throw new Error(
-            "why are you accessing this here lol"
+            "if you got here my code is aboslutely fucked tbh"
         );
     }
     return context;
