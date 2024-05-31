@@ -2,14 +2,18 @@
 
 import { Resend } from "@/node_modules/resend";
 import {validateString} from "@/lib/utils";
+import {getErrorMessage} from "@/lib/utils";
+import ContactFormEmail from "@/emails/contactFormEmail"
+import React from "react";
 
 const resend = new Resend(process.env.RESENT_API_KEY);
 
+
 export const sendEmail = async (formData: FormData) => {
-    const name = formData.get("emailName");
+    const emailSender = formData.get("emailName");
     const message = formData.get("messageName");
 
-    if (!validateString(name, 500)) {
+    if (!validateString(emailSender, 500)) {
         console.log("you le fucked up!")
 
         return {
@@ -23,14 +27,22 @@ export const sendEmail = async (formData: FormData) => {
             error: "Please enter a valid message",
         };
     }
-
-    await resend.emails.send({
-        from: 'onboarding@resend.dev',
-        to: 'dr.wheats@gmail.com',
-        subject: name as string,
-        reply_to: name as string,
-        text: message as string,
-    })
+    try {
+        await resend.emails.send({
+            from: 'Contact Form <onboarding@resend.dev>',
+            to: 'dr.wheats@gmail.com',
+            subject: "Contact Form Submission",
+            reply_to: emailSender as string,
+            react: React.createElement(ContactFormEmail, {
+                message: message as string,
+                emailSender: emailSender as string,
+            }),
+        });
+    }
+catch (error: unknown) {
+    return {
+        error: getErrorMessage(error)
+    }}
 }
 
 export default sendEmail;
