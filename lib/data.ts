@@ -69,7 +69,7 @@ export const projectsData = [
     {
         title: "Draft League",
         description:
-            "A central hub to manage the Pokemon draft league that I play with my friends. It's written in react, and it communicates with my node/express API server, using a Google Sheet document as the database.",
+            "A frontend for my friends Pokemon draft league. It's written in react, and it communicates with my node/express API server, and uses a Google Sheet document as a database.",
         tags: ["JavaScript", "React", "Node.js", ],
         imageUrl: monsImage,
         href: "https://mons.ben.place/"

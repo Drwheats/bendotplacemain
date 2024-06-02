@@ -11,7 +11,7 @@ export default function Header() {
     const { currentSection, setCurrentSection, setLastClicked} = useCurrentSectionContext();
     return (
         <header className="z-[99] relative">
-            <motion.div className="fixed top-0 left-1/2 -translate-x-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-25 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[32rem] sm:rounded-full bg-white"
+            <motion.div className="fixed top-0 left-1/2 -translate-x-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-25 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[32rem] sm:rounded-full bg-white dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75 dark:text-gray-950"
             initial={{ y: -100, x: "-50%", opacity: 0}}
             animate={{ y: 0, x: "-50%", opacity: 1}}
             ></motion.div>
@@ -26,7 +26,7 @@ export default function Header() {
                                            animate={{y: 0, opacity: 1}}
                                 >
                                     <Link className={clsx("flex w-full items-center justify-center px-3 py-2 " +
-                                        "hover:text-gray-950 transition", {"text-gray-950": currentSection === category.name})}
+                                        "hover:text-gray-950 transition", {"text-gray-950 dark:text-gray-50": currentSection === category.name})}
                                           href={category.hash} onClick={
                                         () => {
                                             setCurrentSection(category.name)
@@ -36,7 +36,7 @@ export default function Header() {
 
                                         {
                                             category.name === currentSection && (
-                                                <motion.span className="bg-gray-100 rounded-full absolute inset-0 -z-10" layoutId="currentSection"
+                                                <motion.span className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-700" layoutId="currentSection"
                                                               transition={{type:"spring", stiffness: 400, damping: 30}}
                                                 ></motion.span>
                                             )

@@ -6,6 +6,7 @@ import {useObservedSection} from "@/lib/customHooks";
 import { sendEmail } from "@/serverFunctions/sendEmail"
 import { useFormStatus} from "react-dom"
 import SubmitButton from "@/components/submitButton";
+import toast from "react-hot-toast";
 
 export default function Contact() {
     const {ref} = useObservedSection("Contact", 0.75);
@@ -34,7 +35,12 @@ export default function Contact() {
 
             <form className="mt-10 flex flex-col"
             action={ async (formData) => {
-                await sendEmail(formData);
+                const {data, error} = await sendEmail(formData);
+                if (error) {
+                    toast.error("Oop - Ben Dot Server is broken.");
+                    return;
+                }
+                toast.success("Email Sent Successfully!")
             }}>
                 <input name="emailName" className=" group h-14 rounded-lg border border-black/10 p-4" type="email" placeholder="Your email" required maxLength={500}/>
                 <textarea name="messageName" className={"h-52 my-3 rounded-lg borderBlack p-4 "} placeholder="Your message" required maxLength={5000}/>

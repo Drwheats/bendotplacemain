@@ -5,6 +5,7 @@ import {validateString} from "@/lib/utils";
 import {getErrorMessage} from "@/lib/utils";
 import ContactFormEmail from "@/emails/contactFormEmail"
 import React from "react";
+import {data} from "autoprefixer";
 
 const resend = new Resend(process.env.RESENT_API_KEY);
 
@@ -27,8 +28,9 @@ export const sendEmail = async (formData: FormData) => {
             error: "Please enter a valid message",
         };
     }
+    let data;
     try {
-        await resend.emails.send({
+        data = await resend.emails.send({
             from: 'Contact Form <onboarding@resend.dev>',
             to: 'dr.wheats@gmail.com',
             subject: "Contact Form Submission",
@@ -43,6 +45,9 @@ catch (error: unknown) {
     return {
         error: getErrorMessage(error)
     }}
+    return data;
+
 }
+
 
 export default sendEmail;
