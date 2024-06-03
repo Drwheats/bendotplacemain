@@ -12,6 +12,7 @@ export default function Contact() {
     const {ref} = useObservedSection("Contact", 0.75);
     const {pending} = useFormStatus();
 
+
     return (
         <motion.section id="contact" className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center" ref={ref}
         initial={{

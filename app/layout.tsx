@@ -7,6 +7,7 @@ import CurrentSectionContextProvider from "@/context/currentSectionContext";
 import {Toaster} from "react-hot-toast";
 import Footer from "@/app/Footer";
 import ThemeSwitcher from "@/components/themeSwitcher";
+import ThemeContextProvider from "@/context/theme-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         className="bg-green-200 absolute top-[-6rem] right[11rem] h-[32rem] w-[32rem] rounded-full blur-[10rem] sm:w-[69rem] dark:bg-[#900C3F]"></div>
     <div
         className="bg-blue-200 absolute top-[-1rem] -z-10 left[-35rem] h-[32rem] w-[50rem] rounded-full blur-[10rem] sm:w-[69rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
+    <ThemeContextProvider>
     <CurrentSectionContextProvider >
     <Header />
     {children}
@@ -34,6 +36,7 @@ export default function RootLayout({
     </CurrentSectionContextProvider>
     <Footer />
     <ThemeSwitcher />
+    </ThemeContextProvider>
 
     </body>
     </html>
