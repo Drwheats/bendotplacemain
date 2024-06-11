@@ -18,7 +18,7 @@ export default function Contact() {
             opacity: 0,
         }}
         whileInView={{
-            opacity: 1
+            opacity: 10
         }}
         transition={{
             duration: 1
