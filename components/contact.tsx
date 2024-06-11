@@ -4,13 +4,12 @@ import SectionHeading from "@/components/sectionHeading";
 import { motion } from 'framer-motion';
 import {useObservedSection} from "@/lib/customHooks";
 import { sendEmail } from "@/serverFunctions/sendEmail"
-import { useFormStatus} from "react-dom"
 import SubmitButton from "@/components/submitButton";
 import toast from "react-hot-toast";
 
 export default function Contact() {
     const {ref} = useObservedSection("Contact", 0.75);
-    const {pending} = useFormStatus();
+    // const {pending} = useFormStatus();
 
 
     return (
@@ -36,7 +35,7 @@ export default function Contact() {
 
             <form className="mt-10 flex flex-col"
             action={ async (formData) => {
-                const {data, error} = await sendEmail(formData);
+                const {error} = await sendEmail(formData);
                 if (error) {
                     toast.error("Oop - Ben Dot Server is broken.");
                     return;
