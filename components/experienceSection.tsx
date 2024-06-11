@@ -7,7 +7,6 @@ import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline
 import 'react-vertical-timeline-component/style.min.css'
 import {useObservedSection} from "@/lib/customHooks";
 import { motion } from "framer-motion";
-import theme from "tailwindcss/defaultTheme";
 import {useTheme} from "@/context/theme-context";
 
 export default function ExperienceSection() {

@@ -47,8 +47,8 @@ export default function Intro() {
                 className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl w-[70vw]"
                 initial={{opacity: 0, y: 100, z: 1}}
                 animate={{opacity: 1, y: 0}}
-            >
-                <span className="font-bold">Hello, I am Ben.</span> and welcome to my{" "}
+            >Hello, I am
+                <span className="font-bold"> Ben</span> and welcome to my{" "}
                 <span className="font-bold">Place</span>.{" "}
                 This is where I showcase my programming projects, written in <span className="underline">React</span>, <span className="underline">Next.js</span> and <span className="underline">Node.js</span>.
             </motion.h1>
@@ -73,26 +73,26 @@ export default function Intro() {
                     <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/>
                 </Link>
 
-                <a
-                    className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-                    href="/resume.pdf"
-                    download
-                >
-                    Download Resume{" "}
-                    <HiDownload className="opacity-50 group-hover:translate-y-1 transition"/>
-                </a>
+                {/*<a*/}
+                {/*    className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"*/}
+                {/*    href="/resume.pdf"*/}
+                {/*    download*/}
+                {/*>*/}
+                {/*    Download Resume{" "}*/}
+                {/*    <HiDownload className="opacity-50 group-hover:translate-y-1 transition"/>*/}
+                {/*</a>*/}
 
-                <a
-                    className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-blue-300/60"
-                    href="https://linkedin.com"
-                    target="_blank"
-                >
-                    <BsLinkedin/>
-                </a>
+                {/*<a*/}
+                {/*    className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-blue-300/60"*/}
+                {/*    href="https://linkedin.com"*/}
+                {/*    target="_blank"*/}
+                {/*>*/}
+                {/*    <BsLinkedin/>*/}
+                {/*</a>*/}
 
                 <a
                     className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-blue-300/60"
-                    href="https://github.com"
+                    href="https://github.com/drwheats"
                     target="_blank"
                 >
                     <FaGithubSquare/>

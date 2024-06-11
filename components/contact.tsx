@@ -28,7 +28,7 @@ export default function Contact() {
             once: true,
         }}><SectionHeading>Contact me: </SectionHeading>
 
-            <p className="text-gray-700 -mt-6">
+            <p className="text-gray-700">
                 Please contact me via email or through this form.
 
                 {/*at {" "} <a className="Underline" href="mailto:dr.wheats@gmail.com">dr.wheats@gmail.com</a>{" "}*/}
@@ -43,8 +43,8 @@ export default function Contact() {
                 }
                 toast.success("Email Sent Successfully!")
             }}>
-                <input name="emailName" className=" group h-14 rounded-lg border border-black/10 p-4" type="email" placeholder="Your email" required maxLength={500}/>
-                <textarea name="messageName" className={"h-52 my-3 rounded-lg borderBlack p-4 "} placeholder="Your message" required maxLength={5000}/>
+                <input name="emailName" className=" group h-14 rounded-lg border border-black/10 p-4 dark:text-black" type="email" placeholder="Your email" required maxLength={500}/>
+                <textarea name="messageName" className={"h-52 my-3 rounded-lg borderBlack p-4 dark:text-black"} placeholder="Your message" required maxLength={5000}/>
                 <SubmitButton />
             </form>
         </motion.section>

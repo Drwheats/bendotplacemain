@@ -31,30 +31,32 @@ export const navBarCategories = [
 ] as const;
 
 export const experiencesData = [
+
     {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
+        title: "Helpdesk/Project Manager",
+        location: "Toronto",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-        icon: React.createElement(LuGraduationCap),
-        date: "2019",
-    },
-    {
-        title: "Front-End Developer",
-        location: "Orlando, FL",
-        description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+            "Worked a help desk role in Toronto, Ontario.",
         icon: React.createElement(CgWorkAlt),
-        date: "2019 - 2021",
+        date: "2022 - 2024",
     },
     {
-        title: "Full-Stack Developer",
-        location: "Houston, TX",
+        title: "Graduated University",
+        location: "York University, Toronto",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-        icon: React.createElement(FaReact),
-        date: "2021 - present",
+            "Graduated from York University with a Computer Science degree. ",
+        icon: React.createElement(LuGraduationCap),
+        date: "2024",
     },
+    {
+        title: "Freelance web developer",
+        location: "Toronto",
+        description:
+            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind and MySQL. I'm open to full-time opportunities.",
+        icon: React.createElement(FaReact),
+        date: "2024 - present",
+    },
+
 ] as const;
 
 export const projectsData = [
@@ -78,7 +80,7 @@ export const projectsData = [
         title: "Local Theatre Calendar",
         description:
             "Shows what's playing in downtown Toronto cinemas. Uses my node/express API server, and I collect the data with a scraper that automatically runs every week. Hastily turned into a React app. ",
-        tags: ["JavaScript", "Node.js", ],
+        tags: ["TypeScript", "React", "Node.js", ],
         imageUrl: calendarImage,
         href: "https://calendar.ben.place/"
     },
@@ -94,13 +96,10 @@ export const skillsData = [
     "Node.js",
     "Git",
     "Tailwind",
-    "Prisma",
     "MongoDB",
-    "Redux",
     "GraphQL",
-    "Apollo",
     "Express",
-    "PostgreSQL",
+    "MySQL",
     "Python",
     "Django",
     "Framer Motion",
