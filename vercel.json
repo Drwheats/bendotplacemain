@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/.well-known/matrix/client",
+      "destination": "/api/matrix-client"
+    }
+  ]
+}
