@@ -1,11 +1,28 @@
 {
-  "m.homeserver": {
-    "base_url": "https://matrix.ben.place"
-  },
-  "org.matrix.msc3862.v1": {
-    "url": "https://matrix.ben.place"
-  },
-  "io.element.rtc": {
-    "prototype": "can-i-call-you"
-  }
+    "cc.etke.synapse-admin": {
+        "asManagedUsers": [
+            "^@baibot:ben\\.place$",
+            "^@discordbot:ben\\.place$",
+            "^@discord_[0-9]+:ben\\.place$"
+        ],
+        "corsCredentials": "same-origin",
+        "externalAuthProvider": false,
+        "menu": [],
+        "restrictBaseUrl": "https://matrix.ben.place"
+    },
+    "im.vector.riot.jitsi": {
+        "preferredDomain": "jitsi.ben.place"
+    },
+    "io.element.jitsi": {
+        "preferredDomain": "jitsi.ben.place"
+    },
+    "m.homeserver": {
+        "base_url": "https://matrix.ben.place"
+    },
+    "org.matrix.msc4143.rtc_foci": [
+        {
+            "livekit_service_url": "https://matrix.ben.place/livekit-jwt-service",
+            "type": "livekit"
+        }
+    ]
 }
