@@ -1,8 +1,11 @@
 {
-  "rewrites": [
+  "headers": [
     {
-      "source": "/.well-known/matrix/client",
-      "destination": "/api/matrix-client"
+      "source": "/.well-known/matrix/(server|client)",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
     }
   ]
 }
