@@ -37,7 +37,7 @@ export default function Contact() {
             action={ async (formData) => {
                 const {error} = await sendEmail(formData);
                 if (error) {
-                    toast.error("Oop - Ben Dot Server is broken.");
+                    toast.error(error);
                     return;
                 }
                 toast.success("Email Sent Successfully!")

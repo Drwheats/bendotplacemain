@@ -1,34 +1,35 @@
 "use server";
 
-import { Resend } from "resend";import {validateString} from "@/lib/utils";
-import {getErrorMessage} from "@/lib/utils";
-import ContactFormEmail from "@/emails/contactFormEmail"
+import { Resend } from "resend";
+import { getErrorMessage, validateString } from "@/lib/utils";
+import ContactFormEmail from "@/emails/contactFormEmail";
 import React from "react";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-
 export const sendEmail = async (formData: FormData) => {
+    const resendApiKey = process.env.RESEND_API_KEY;
+
+    if (!resendApiKey) {
+        console.error("RESEND_API_KEY is not configured in the deployment environment.");
+        return { error: "Contact form configuration is missing." };
+    }
+
     const emailSender = formData.get("emailName");
     const message = formData.get("messageName");
 
     if (!validateString(emailSender, 500)) {
-        console.log("you le fucked up!")
-
         return {
             error: "Please enter a valid email address",
         };
     }
 
     if (!validateString(message, 5000)) {
-        console.log("you le fucked up!")
         return {
             error: "Please enter a valid message",
         };
     }
-    let data;
     try {
-        data = await resend.emails.send({
+        const resend = new Resend(resendApiKey);
+        const result = await resend.emails.send({
             from: 'Contact Form <onboarding@resend.dev>',
             to: 'dr.wheats@gmail.com',
             subject: "Contact Form Submission",
@@ -38,12 +39,16 @@ export const sendEmail = async (formData: FormData) => {
                 emailSender: emailSender as string,
             }),
         });
+        if (result.error) {
+            console.error("Resend rejected email:", result.error);
+            return { error: result.error.message };
+        }
+
+        return { data: result.data };
+    } catch (error: unknown) {
+        console.error("Email send failed:", error);
+        return { error: getErrorMessage(error) };
     }
-catch (error: unknown) {
-    return {
-        error: getErrorMessage(error)
-    }}
-    return data;
 
 }
 

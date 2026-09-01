@@ -23,8 +23,8 @@ export default function Intro() {
                         transition={{type: "tween", duration: 0.2}}
                     >
                         <Image
-                            src="https://static.wikia.nocookie.net/amogus/images/c/cc/Amogbob.png/revision/latest?cb=20210720212859"
-                            alt="Among Us"
+                            src="/lime.jpg"
+                            alt="Ben"
                             width="192"
                             height="192"
                             quality="95"
@@ -38,7 +38,7 @@ export default function Intro() {
                                  transition={{type: 'spring', stiffness: 125, delay: 0.1, duration: 1}}
                     >
 
-                        😎
+                        
                     </motion.span>
                 </div>
             </div>
