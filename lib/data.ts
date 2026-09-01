@@ -1,6 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
+import {FaCog} from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import boardImage from "@/public/boardportfolioimage.png";
 import monsImage from "@/public/monsportfolioimage.png";
@@ -36,7 +37,7 @@ export const experiencesData = [
         title: "Helpdesk/Project Manager",
         location: "Toronto",
         description:
-            "Worked a help desk role in Toronto, Ontario.",
+            "Managed the IT infrastructure/tech stack for digital marketing freelancers, including Google Workspace/Office 365, Hubspot, and our Zoho IT helpdesk.",
         icon: React.createElement(CgWorkAlt),
         date: "2022 - 2024",
     },
@@ -49,10 +50,18 @@ export const experiencesData = [
         date: "2024",
     },
     {
-        title: "Freelance web developer",
+        title: "IT Coordinator Role",
         location: "Toronto",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind and MySQL. I'm open to full-time opportunities.",
+            "Worked as an IT coordinator for a Toronto fintech company. Ran their helpdesk/managed IT services, and managed various IT projects relating to IT infrastructure, automations/integrations as well as cybersecurtity/compliance.",
+        icon: React.createElement(FaCog),
+        date: "2024 - present",
+    },
+    {
+        title: "IT Specialist Role",
+        location: "Toronto",
+        description:
+            "Worked as an IT specialist for a Toronto apparel company, taking on greater autonomy, proposing my own IT projects, and having complete ownership/management of my company's tech stack. ",
         icon: React.createElement(FaReact),
         date: "2024 - present",
     },
@@ -87,20 +96,17 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Git",
-    "Tailwind",
-    "MongoDB",
-    "GraphQL",
-    "Express",
-    "MySQL",
+    "Device Management",
+    "Cybersecurity",
+    "Automations",
+    "Integrations",
+    "Software Development",
+    "React/Node.js",
     "Python",
-    "Django",
-    "Framer Motion",
+    "SaaS Administration",
+    "Office 365",
+    "Google Workspace",
+    "IAM/SSO",
+    "Git",
+    "Helpdesk/IT Support",
 ] as const;

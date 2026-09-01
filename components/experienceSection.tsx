@@ -14,11 +14,11 @@ export default function ExperienceSection() {
     const { theme } = useTheme();
     return (
 
-        <motion.section id="experience" className="scroll-mt-28 mb-28 sm:mb-40 h-screen flex items-center justify-center"
+        <motion.section id="experience" className="scroll-mt-28 mb-28 sm:mb-40 h-screen flex flex-col items-center justify-center"
         ref={ref}
         >
             <SectionHeading>Experience:</SectionHeading>
-            <VerticalTimeline lineColor="">
+            <VerticalTimeline lineColor="" className="w-full">
                 {experiencesData.map((experience, index) => (
                     <React.Fragment key={index}>
                         <VerticalTimelineElement
