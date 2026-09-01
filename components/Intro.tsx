@@ -56,13 +56,13 @@ export default function Intro() {
                 className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-xl w-[70vw]"
                 initial={{opacity: 0, y: 100, z: 1}}
                 animate={{opacity: 1, y: 0}}
-            >I am a Toronto-based software developer and IT enthusiast. I've worked in lots of different industries - Healthcare, Finance, Marketing, Apparel, and I love working with people and technology, and seeing a good project come to completion.
+            >I am a Toronto-based software developer and IT enthusiast. I&apos;ve worked in lots of different industries - Healthcare, Finance, Marketing, Apparel, and I love working with people and technology, and seeing a good project come to completion.
             </motion.h1>
 <motion.h1
                 className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-xl w-[70vw]"
                 initial={{opacity: 0, y: 100, z: 1}}
                 animate={{opacity: 1, y: 0}}
-            >People rely on me when tech isn't working as it should, or when they have a really good idea and need somebody to translate it into a working solution with technology.
+            >People rely on me when tech isn&apos;t working as it should, or when they have a really good idea and need somebody to translate it into a working solution with technology.
             </motion.h1>
             <motion.div
                 className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium "
