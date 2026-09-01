@@ -5,9 +5,8 @@ import {validateString} from "@/lib/utils";
 import {getErrorMessage} from "@/lib/utils";
 import ContactFormEmail from "@/emails/contactFormEmail"
 import React from "react";
-import {data} from "autoprefixer";
 
-const resend = new Resend(process.env.RESENT_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 
 export const sendEmail = async (formData: FormData) => {
