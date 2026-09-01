@@ -1,6 +1,6 @@
 "use server";
 
-import { Resend } from "@/node_modules/resend";
+import { Resend } from "resend";
 import {validateString} from "@/lib/utils";
 import {getErrorMessage} from "@/lib/utils";
 import ContactFormEmail from "@/emails/contactFormEmail"
