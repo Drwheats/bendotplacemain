@@ -14,7 +14,7 @@ export default function ExperienceSection() {
     const { theme } = useTheme();
     return (
 
-        <motion.section id="experience" className="scroll-mt-28 mb-28 sm:mb-40 h-screen flex flex-col items-center justify-center"
+        <motion.section id="experience" className="scroll-mt-28 mb-40 sm:mb-52 min-h-screen flex flex-col items-center justify-center"
         ref={ref}
         >
             <SectionHeading>Experience:</SectionHeading>
