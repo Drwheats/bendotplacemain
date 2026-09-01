@@ -6,10 +6,20 @@ import {getErrorMessage} from "@/lib/utils";
 import ContactFormEmail from "@/emails/contactFormEmail"
 import React from "react";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-
 export const sendEmail = async (formData: FormData) => {
+    const resendApiKey = process.env.RESEND_API_KEY;
+
+    // Vercel provides this value at runtime from Project Settings → Environment Variables.
+    // Keeping the check inside the action prevents a missing production variable from
+    // crashing the page or exposing the key to the browser.
+    if (!resendApiKey) {
+        console.error("RESEND_API_KEY is not configured.");
+        return {
+            error: "The contact form is not configured yet.",
+        };
+    }
+
+    const resend = new Resend(resendApiKey);
     const emailSender = formData.get("emailName");
     const message = formData.get("messageName");
 
