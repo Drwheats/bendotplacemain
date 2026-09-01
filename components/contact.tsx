@@ -35,6 +35,10 @@ export default function Contact() {
             action={ async (formData) => {
                 const {error} = await sendEmail(formData);
                 if (error) {
+                    console.log("Environment diagnostics:", {
+    vercelEnv: process.env.VERCEL_ENV,
+    hasResendKey: !!process.env.RESEND_API_KEY,
+});
                     toast.error(error);
                     return;
                 }
