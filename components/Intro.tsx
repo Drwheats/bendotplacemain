@@ -62,7 +62,7 @@ export default function Intro() {
                 className="mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-xl w-[70vw]"
                 initial={{opacity: 0, y: 100, z: 1}}
                 animate={{opacity: 1, y: 0}}
-            >People rely on me when tech isn&apos;t working as it should, or when they have a really good idea and need somebody to translate it into a working solution with technology.
+            >People rely on me when tech isn&apos;t working as it should, or when they have a good idea and need somebody to turn it into a working solution.
             </motion.h1>
             <motion.div
                 className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium "
