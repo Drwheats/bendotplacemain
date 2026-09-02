@@ -105,7 +105,7 @@ export const serviceData = [
             "Remote and onsite support for Mac/Windows devices, mobile devices, printers, networks, software, email, accounts, and day-to-day technical issues. ",
         tags: ["Mac", "Windows", "Networking", "Email Deliverability", "Troubleshooting"],
         imageUrl: techpic1,
-        href: "https://board.ben.place/"
+        href: "https://ben.place/#services"
     },
     {
         title: "Systems and Administration",
@@ -113,7 +113,7 @@ export const serviceData = [
             "Microsoft 365 and Google Workspace support, user on/offboarding, device and account management, permissions, software deployment/integration, backups and day to day administration.",
         tags: ["Office 365", "Google Workspace", "Onboarding", "Offboarding", "Mobile Device Management" ],
         imageUrl: techpic2,
-        href: "https://mons.ben.place/"
+        href: "https://ben.place/#services"
     },
     {
         title: "Projects and Infrastructure",
@@ -121,7 +121,7 @@ export const serviceData = [
             "Office setups, network deployments, migrations androllouts, cloud implementations, web development and other one-time IT projects.",
         tags: ["Office Setup", "Email Marketing", "Web Development", "SaaS migrations", "Workflow automations"] ,
         imageUrl: techpic3,
-        href: "https://calendar.ben.place/"
+        href: "https://ben.place/#services"
     },
 ] as const;
 
