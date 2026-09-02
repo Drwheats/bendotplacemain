@@ -11,13 +11,13 @@ export default function Header() {
     const { currentSection, setCurrentSection, setLastClicked} = useCurrentSectionContext();
     return (
         <header className="z-[99] relative">
-            <motion.div className="fixed top-0 left-1/2 -translate-x-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-25 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[32rem] sm:rounded-full bg-white dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75 dark:text-gray-950"
+            <motion.div className="fixed top-0 left-1/2 -translate-x-1/2 h-[4.5rem] w-[calc(100%-0.75rem)] rounded-none border border-white border-opacity-25 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-fit sm:min-w-[38rem] sm:rounded-full bg-white dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75 dark:text-gray-950"
             initial={{ y: -100, x: "-50%", opacity: 0}}
             animate={{ y: 0, x: "-50%", opacity: 1}}
             ></motion.div>
 
-            <nav className="fixed top-[0.15rem] flex left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[2rem] sm:h-[initial] sm:py-0">
-                <ul className="flex w-[20rem] flex-wrap items-center justify-center gap-y-1 text-[1rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5" >
+            <nav className="fixed top-[0.15rem] left-1/2 flex h-12 w-[calc(100%-0.75rem)] -translate-x-1/2 justify-center py-2 sm:top-[2rem] sm:h-[initial] sm:w-fit sm:py-0">
+                <ul className="mx-auto flex w-fit flex-wrap items-center justify-center gap-y-1 text-[1rem] font-medium text-gray-500 sm:flex-nowrap sm:gap-5" >
                     {
                         navBarCategories.map(category=> (
                                 <motion.li className="h-3/4 flex items-center justify-center relative"

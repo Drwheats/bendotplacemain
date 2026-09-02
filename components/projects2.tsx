@@ -9,13 +9,13 @@ import Link from "next/link";
 import {useTheme} from "@/context/theme-context";
 
 export default function Projects2() {
-    const {ref} = useObservedSection("Projects", 0.5);
+    const {ref} = useObservedSection("Services", 0.5);
     const { theme } = useTheme();
 
     return (
         <motion.section 
             ref={ref} 
-            id="projects2" 
+            id="services" 
             className="scroll-mt-28 mb-28 sm:mb-40 w-full flex flex-col items-center" 
             initial={{
                 opacity: 0,

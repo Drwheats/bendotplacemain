@@ -15,7 +15,10 @@ export const navBarCategories = [
         name: "Home",
         hash: "#home",
     },
-
+    {
+        name: "Services",
+        hash: "#services",
+    },
     {
         name: "Projects",
         hash: "#projects",
